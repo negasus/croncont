@@ -2,9 +2,13 @@
 
 Simple docker image for run cron task with call remote URL.
 
-## Docker image
+## Docker images
 
 ```
+negasus/croncont:latest
+negasus/croncont:0.1.0
+negasus/croncont:0.1
+negasus/croncont:0
 ```
 
 ## Config (env variables)
@@ -20,3 +24,13 @@ Simple docker image for run cron task with call remote URL.
 - `CRON_LISTEN` listen adderss for health checker (`/`) and metrics (`/metrics`) routes. Not use if empty, default `0.0.0.0:8001`
 
 ## Usage
+
+```
+docker run -e CRON_URL=http://domain.com negasus/croncont
+```
+
+## Changelog
+
+### v0.1.0 (2020-09-10)
+
+- initial release
