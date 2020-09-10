@@ -10,7 +10,7 @@ jobs:
       - name: publish to registry - release
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: negasus/crontcont
+          name: negasus/croncont
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tag_semver: true
@@ -19,7 +19,7 @@ jobs:
       - name: publish to registry - latest
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: negasus/crontcont
+          name: negasus/croncont
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tags: "latest"
