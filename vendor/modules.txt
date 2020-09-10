@@ -1,0 +1,10 @@
+# github.com/BurntSushi/toml v0.3.1
+github.com/BurntSushi/toml
+# github.com/cristalhq/aconfig v0.5.1
+## explicit
+github.com/cristalhq/aconfig
+# github.com/robfig/cron/v3 v3.0.0
+## explicit
+github.com/robfig/cron/v3
+# gopkg.in/yaml.v2 v2.3.0
+gopkg.in/yaml.v2
