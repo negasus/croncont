@@ -1,0 +1,26 @@
+name: docker release
+on:
+  - release
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: publish to registry - release
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: negasus/crontcont
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          tag_semver: true
+          dockerfile: Dockerfile
+
+      - name: publish to registry - latest
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: negasus/crontcont
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          tags: "latest"
+          dockerfile: Dockerfile

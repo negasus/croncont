@@ -18,6 +18,10 @@ import (
 	"time"
 )
 
+var (
+	version = "undefined"
+)
+
 type config struct {
 	URL            string `default:"http://localhost" usage:"request url"`
 	Method         string `default:"POST" usage:"request http method"`
@@ -33,6 +37,8 @@ type config struct {
 }
 
 func main() {
+	log.Printf("croncont version %s", version)
+
 	var (
 		calls = promauto.NewCounter(prometheus.CounterOpts{
 			Name: "croncont_calls",
