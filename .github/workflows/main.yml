@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: publish to registry - release
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: negasus/croncont
           username: ${{ secrets.DOCKER_USERNAME }}
@@ -17,7 +17,7 @@ jobs:
           dockerfile: Dockerfile
 
       - name: publish to registry - latest
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: negasus/croncont
           username: ${{ secrets.DOCKER_USERNAME }}
